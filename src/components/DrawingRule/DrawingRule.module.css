@@ -5,3 +5,18 @@
   transform-origin: left;
   transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+.gradient {
+  height: 1px;
+  background: rgba(244, 241, 235, 0.14);
+  transition: background 1.1s ease;
+}
+
+.gradient[data-lit='true'] {
+  background: linear-gradient(
+    90deg,
+    var(--color-accent),
+    var(--color-accent-35, rgba(199, 123, 74, 0.35)) 70%,
+    var(--color-accent-18, rgba(199, 123, 74, 0.18))
+  );
+}

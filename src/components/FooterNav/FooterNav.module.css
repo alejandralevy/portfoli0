@@ -1,0 +1,57 @@
+.wrapper {
+  margin-top: clamp(34px, 4vw, 48px);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-faint);
+  margin: 0 4px 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(12px, 1.6vw, 18px);
+}
+
+.card {
+  text-decoration: none;
+  color: var(--color-ink);
+  border: 1px solid var(--color-divider);
+  border-radius: 16px;
+  padding: clamp(22px, 2.6vw, 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #FBFAF5;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card[data-dir='back']:hover {
+  background: var(--color-ink);
+  color: #F4F1EB;
+  border-color: var(--color-ink);
+  transform: translateY(-3px);
+}
+
+.card[data-dir='next']:hover {
+  background: var(--next-color);
+  color: #FFFFFF;
+  border-color: var(--next-color);
+  transform: translateY(-3px);
+}
+
+.sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+.card[data-dir='next'] {
+  align-items: flex-end;
+  text-align: right;
+}

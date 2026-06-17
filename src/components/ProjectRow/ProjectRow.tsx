@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import type { Project } from '../../types';
 import styles from './ProjectRow.module.css';
 
@@ -6,13 +7,10 @@ interface ProjectRowProps {
 }
 
 export function ProjectRow({ project }: ProjectRowProps) {
-  const { n, name, role, year, desc, color } = project;
+  const { n, name, role, year, desc, color, href } = project;
 
-  return (
-    <div
-      className={styles.row}
-      style={{ '--brand': color } as React.CSSProperties}
-    >
+  const inner = (
+    <>
       <span className={styles.number}>{n}</span>
       <div className={styles.info}>
         <div className={styles.nameRow}>
@@ -25,6 +23,15 @@ export function ProjectRow({ project }: ProjectRowProps) {
         <span className={styles.role}>{role}</span>
         <span className={styles.year}>{year} →</span>
       </div>
-    </div>
+    </>
   );
+
+  const props = {
+    className: styles.row,
+    style: { '--brand': color } as React.CSSProperties,
+  };
+
+  return href
+    ? <Link to={href} {...props}>{inner}</Link>
+    : <div {...props}>{inner}</div>;
 }
