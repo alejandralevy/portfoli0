@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+  background: var(--color-accent);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(23px, 2.8vw, 28px);
+  letter-spacing: -0.012em;
+  line-height: 1;
+}
+
+.desc {
+  font-size: 14.5px;
+  color: var(--color-subtle);
+  line-height: 1.58;
+  margin: 11px 0 17px;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

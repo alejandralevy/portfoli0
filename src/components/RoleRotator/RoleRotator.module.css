@@ -1,0 +1,25 @@
+.wrapper {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(26px, 4.4vw, 42px);
+  line-height: 1.16;
+  letter-spacing: -0.012em;
+  margin-bottom: 32px;
+  max-width: 920px;
+}
+
+.role {
+  font-style: italic;
+  color: var(--color-accent);
+  transition: opacity 0.25s ease;
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 0.82em;
+  background: var(--color-ink);
+  margin-left: 5px;
+  vertical-align: -1px;
+  animation: al-caret 1.05s steps(1) infinite;
+}

@@ -1,0 +1,7 @@
+.section {
+  /* intentionally empty — DrawingRule sits flush */
+}
+
+.inner {
+  padding: clamp(34px, 5vw, 52px) 0 52px;
+}

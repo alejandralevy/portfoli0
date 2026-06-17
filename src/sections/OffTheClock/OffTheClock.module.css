@@ -1,0 +1,52 @@
+.inner {
+  padding: clamp(34px, 5vw, 44px) 0 52px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.copy {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-subtle);
+  max-width: 420px;
+  margin: 0;
+}
+
+.photoStrip {
+  display: flex;
+  gap: clamp(10px, 1.6vw, 18px);
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.photo {
+  flex: 1 1 160px;
+  min-width: 140px;
+  height: clamp(190px, 24vw, 300px);
+  border-radius: 12px;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    135deg,
+    #ECEAE3 0 12px,
+    #E6E3DB 12px 24px
+  );
+  border: 1px solid rgba(28, 27, 25, 0.1);
+  display: flex;
+  align-items: flex-end;
+  padding: 13px;
+}
+
+.photoLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-faint);
+}

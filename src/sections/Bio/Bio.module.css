@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 54px 0 56px;
+}
+
+.tickerWrapper {
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(28px, 4vw, 56px);
+  max-width: 1000px;
+}
+
+.bio {
+  font-size: 16.5px;
+  line-height: 1.68;
+  color: var(--color-ink-deep);
+}
