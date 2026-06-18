@@ -1,0 +1,50 @@
+.mockup {
+  background: #FCFBF8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 34px 64px -38px rgba(0, 0, 0, 0.7);
+}
+
+.chrome {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 13px;
+  background: #ECE8E1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.14);
+  flex: none;
+}
+
+.dot[data-accent] {
+  background: var(--color-accent);
+}
+
+.label {
+  margin-left: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #8C877E;
+}
+
+.urlBar {
+  margin-left: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: #8C877E;
+  background: #F6F4EF;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 999px;
+  padding: 4px 13px;
+}
+
+.content {
+  position: relative;
+}

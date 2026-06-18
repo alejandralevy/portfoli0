@@ -7,6 +7,7 @@ export interface Project {
   year: string;
   desc: string;
   color: string;
+  href?: string;
 }
 
 export interface Discipline {

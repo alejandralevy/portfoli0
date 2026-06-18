@@ -1,0 +1,1 @@
+export { Decentraland } from './Decentraland';

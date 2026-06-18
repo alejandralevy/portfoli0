@@ -8,3 +8,8 @@
   border-radius: 999px;
   white-space: nowrap;
 }
+
+.dark {
+  color: #E4E0DA;
+  border-color: var(--color-accent-border);
+}
