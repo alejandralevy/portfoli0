@@ -1,0 +1,224 @@
+import type { Lang } from '../types';
+
+export const weCareCopy = {
+  en: {
+    metaLine: 'PRODUCT STRATEGY & DESIGN · CONSULTING · 2024',
+    badge: 'IN DEVELOPMENT',
+    heroStatement: 'WeCare is a healthcare equipment company that processes patient orders entirely by hand. They came to me drowning in manual work — so I designed an AI-assisted platform that lets the team supervise orders instead of processing them.',
+    heroBio: 'I joined as an external consultant owning product and design: I ran the discovery, framed the strategy, chose the direction, and prototyped the platform the team is now building.',
+    s1kicker: 'THE PROBLEM',
+    s1head: 'Every order runs on manual work.',
+    s1body: 'At WeCare, a single order — from a therapist request to delivery — passes through a chain of disconnected tools (Excel, SharePoint, vendor emails, invoicing, Stripe). Nothing talks to each other, so a person re-does every step by hand. It is slow, error-prone, and impossible to scale.',
+    flowLabel: 'EVERY STEP, DONE BY HAND',
+    s2kicker: 'THE APPROACH',
+    s2head: 'Three directions weighed — one chosen.',
+    s2body: 'I compared a quick no-code patch, a custom operations platform, and a fully AI-assisted version — on speed, cost, scalability and how much manual work each actually removed. The pick was clear.',
+    chosenBadge: 'CHOSEN DIRECTION',
+    chosenTitle: 'AI-Assisted Operations Platform',
+    chosenTag: 'agent driven',
+    chosenSub: 'Orders are centralized first, then progressively automated — so the team supervises operations instead of manually processing them.',
+    s3kicker: 'THE OPPORTUNITY',
+    s3head: 'Everything manual becomes assisted.',
+    s3body: 'Every task the team does by hand maps to something the platform does for them — the agent assists first, and a person stays in control.',
+    s4kicker: 'THE PROTOTYPE',
+    s4head: 'One workspace for the whole operation.',
+    s4body: 'I prototyped the platform end-to-end: orders, patients and documents in one place, prices that auto-fill, and an agent that drafts orders straight from therapist emails for a human to review.',
+    ctaBtn: 'SEE THE LIVE PROTOTYPE →',
+    ctaNote: 'Interactive — explore the full flow',
+    s5kicker: 'THE ROADMAP',
+    s5head: 'Built in three phases, not one big leap.',
+    s5body: 'Rather than a risky full rebuild, I sequenced the platform so the team gets value from day one and the AI layer comes online progressively. Each phase is usable on its own and de-risks the next.',
+    statusBar: 'Roadmap approved · Phase 1 — the core platform — is in active development now.',
+    navEyebrow: 'KEEP EXPLORING',
+    backSub: '← All projects',
+    backLabel: 'Back to portfolio',
+    nextSub: 'Next project →',
+    nextLabel: 'Decentraland',
+    avail: 'Open to freelance — short & long term',
+  },
+  es: {
+    metaLine: 'PRODUCT STRATEGY & DESIGN · CONSULTORÍA · 2024',
+    badge: 'EN DESARROLLO',
+    heroStatement: 'WeCare es una empresa de equipos médicos que procesa pedidos de pacientes completamente a mano. Llegaron a mí ahogados en trabajo manual — así que diseñé una plataforma asistida por IA que le permite al equipo supervisar pedidos en lugar de procesarlos.',
+    heroBio: 'Me sumé como consultora externa con ownership de producto y diseño: lideré el discovery, armé la estrategia, elegí la dirección y prototipé la plataforma que el equipo está construyendo ahora.',
+    s1kicker: 'LA PROBLEMÁTICA',
+    s1head: 'Cada pedido corre sobre trabajo manual.',
+    s1body: 'En WeCare, un pedido — desde la solicitud del terapeuta hasta la entrega — pasa por una cadena de herramientas desconectadas (Excel, SharePoint, emails de proveedores, facturación, Stripe). Nada se comunica, así que una persona rehace cada paso a mano. Es lento, propenso a errores e imposible de escalar.',
+    flowLabel: 'CADA PASO, HECHO A MANO',
+    s2kicker: 'EL ENFOQUE',
+    s2head: 'Tres direcciones analizadas — una elegida.',
+    s2body: 'Comparé un parche rápido sin código, una plataforma de operaciones personalizada y una versión completamente asistida por IA — en velocidad, costo, escalabilidad y cuánto trabajo manual eliminaba cada una. La elección fue clara.',
+    chosenBadge: 'DIRECCIÓN ELEGIDA',
+    chosenTitle: 'Plataforma de Operaciones Asistida por IA',
+    chosenTag: 'dirigida por agente',
+    chosenSub: 'Los pedidos se centralizan primero y luego se automatizan progresivamente — para que el equipo supervise las operaciones en lugar de procesarlas manualmente.',
+    s3kicker: 'LA OPORTUNIDAD',
+    s3head: 'Todo lo manual se vuelve asistido.',
+    s3body: 'Cada tarea que el equipo hace a mano mapea a algo que la plataforma hace por ellos — el agente asiste primero y la persona mantiene el control.',
+    s4kicker: 'EL PROTOTIPO',
+    s4head: 'Un workspace para toda la operación.',
+    s4body: 'Prototipé la plataforma de punta a punta: pedidos, pacientes y documentos en un solo lugar, precios que se pre-completan y un agente que redacta pedidos desde emails de terapeutas para que un humano los revise.',
+    ctaBtn: 'VER EL PROTOTIPO EN VIVO →',
+    ctaNote: 'Interactivo — explorá el flujo completo',
+    s5kicker: 'EL ROADMAP',
+    s5head: 'Construido en tres fases, no en un gran salto.',
+    s5body: 'En lugar de una reconstrucción riesgosa, secuencié la plataforma para que el equipo obtenga valor desde el día uno y la capa de IA se active progresivamente. Cada fase es usable por sí sola y de-riskea la siguiente.',
+    statusBar: 'Roadmap aprobado · Fase 1 — la plataforma núcleo — está en desarrollo activo ahora.',
+    navEyebrow: 'SEGUÍ EXPLORANDO',
+    backSub: '← Todos los proyectos',
+    backLabel: 'Volver al portfolio',
+    nextSub: 'Siguiente proyecto →',
+    nextLabel: 'Decentraland',
+    avail: 'Disponible para freelance — corto y largo plazo',
+  },
+} as const;
+
+export const skills = ['Product Strategy', 'UX Design', 'Discovery', 'Prototyping', 'AI-Assisted Ops'];
+
+export const flowTools = ['Excel', 'SharePoint', 'Vendors', 'Invoicing', 'Stripe'];
+
+export const manualSteps: Record<Lang, string[]> = {
+  en: [
+    'Review therapist emails',
+    'Re-enter the same data across systems',
+    'Generate documents manually',
+    'Monitor payments manually',
+    'Email vendors manually',
+    'Track approvals & measurements by hand',
+  ],
+  es: [
+    'Revisar emails de terapeutas',
+    'Re-ingresar los mismos datos en distintos sistemas',
+    'Generar documentos manualmente',
+    'Monitorear pagos manualmente',
+    'Enviar emails a proveedores manualmente',
+    'Hacer seguimiento de aprobaciones y mediciones a mano',
+  ],
+};
+
+export const chosenPoints: Record<Lang, string[]> = {
+  en: [
+    'Agent handles repetitive operational tasks',
+    'Scales without adding headcount',
+    'Humans supervise the exceptions',
+    'End-to-end visibility & traceability',
+  ],
+  es: [
+    'El agente maneja tareas operativas repetitivas',
+    'Escala sin agregar personal',
+    'Los humanos supervisan las excepciones',
+    'Visibilidad y trazabilidad de punta a punta',
+  ],
+};
+
+export const transformations: Record<Lang, { before: string; after: string }[]> = {
+  en: [
+    { before: 'Read emails & create orders by hand', after: 'Agent drafts orders from emails' },
+    { before: 'Re-enter data across systems', after: 'Select patients & products from lists' },
+    { before: 'Look up prices in hidden tables', after: 'Prices auto-filled from dropdowns' },
+    { before: 'Check Stripe for payment', after: 'Payment detected automatically' },
+    { before: 'Generate documents manually', after: 'Encounter, invoice & POD auto-generated' },
+    { before: 'Track approvals & measurements', after: 'Flagged & notified automatically' },
+  ],
+  es: [
+    { before: 'Leer emails y crear pedidos a mano', after: 'El agente redacta pedidos desde emails' },
+    { before: 'Re-ingresar datos entre sistemas', after: 'Seleccionar pacientes y productos de listas' },
+    { before: 'Buscar precios en tablas ocultas', after: 'Precios pre-completados desde dropdowns' },
+    { before: 'Revisar Stripe por pagos', after: 'Pago detectado automáticamente' },
+    { before: 'Generar documentos manualmente', after: 'Encuentro, factura y POD auto-generados' },
+    { before: 'Hacer seguimiento de aprobaciones y mediciones', after: 'Marcado y notificado automáticamente' },
+  ],
+};
+
+export const mockupTabs = ['order-detail', 'draft-from-email', 'products-&-fees'];
+
+export const phases: Record<Lang, { label: string; n: string; title: string; desc: string; bullets: string[]; cta: string }[]> = {
+  en: [
+    {
+      label: 'PHASE 1 · CORE',
+      n: '01',
+      title: 'Standardize',
+      desc: 'Get everything into one place with one source of truth.',
+      bullets: [
+        'Centralized platform for orders, patients & documents',
+        'Structured product & fee tables',
+        'Prices, margins & billing auto-filled',
+        'Encounter, invoice & POD auto-generated',
+        'Approvals routed by HCPCS code',
+      ],
+      cta: 'USABLE FROM DAY ONE',
+    },
+    {
+      label: 'PHASE 2 · AUTOMATION',
+      n: '02',
+      title: 'Automate',
+      desc: 'Let events move the order forward on their own.',
+      bullets: [
+        'Stripe webhook → payment detected',
+        'DocuSign webhook → signature detected',
+        'Shipment tracked → delivery → POD sent',
+        'Order status advances automatically',
+        'Vendor emails sent to the right vendor',
+      ],
+      cta: 'RUNS ON ITS OWN',
+    },
+    {
+      label: 'PHASE 3 · AI',
+      n: '03',
+      title: 'Assist',
+      desc: 'Remove the manual intake at the front of the flow.',
+      bullets: [
+        'Agent reads inbound therapist emails',
+        'Order data extracted → draft created',
+        'A human reviews and approves the draft',
+        'Follow-ups & reminders automated',
+        'Existing measurements detected automatically',
+      ],
+      cta: 'HANDS-OFF INTAKE',
+    },
+  ],
+  es: [
+    {
+      label: 'FASE 1 · NÚCLEO',
+      n: '01',
+      title: 'Estandarizar',
+      desc: 'Poner todo en un solo lugar con una única fuente de verdad.',
+      bullets: [
+        'Plataforma centralizada para pedidos, pacientes y documentos',
+        'Tablas de productos y tarifas estructuradas',
+        'Precios, márgenes y facturación pre-completados',
+        'Encuentro, factura y POD auto-generados',
+        'Aprobaciones enrutadas por código HCPCS',
+      ],
+      cta: 'USABLE DESDE EL DÍA UNO',
+    },
+    {
+      label: 'FASE 2 · AUTOMATIZACIÓN',
+      n: '02',
+      title: 'Automatizar',
+      desc: 'Dejar que los eventos muevan el pedido por sí solos.',
+      bullets: [
+        'Stripe webhook → pago detectado',
+        'DocuSign webhook → firma detectada',
+        'Envío rastreado → entrega → POD enviado',
+        'Estado del pedido avanza automáticamente',
+        'Emails enviados al proveedor correcto',
+      ],
+      cta: 'FUNCIONA SOLO',
+    },
+    {
+      label: 'FASE 3 · IA',
+      n: '03',
+      title: 'Asistir',
+      desc: 'Eliminar el ingreso manual al inicio del flujo.',
+      bullets: [
+        'El agente lee emails entrantes de terapeutas',
+        'Datos del pedido extraídos → borrador creado',
+        'Un humano revisa y aprueba el borrador',
+        'Seguimientos y recordatorios automatizados',
+        'Mediciones existentes detectadas automáticamente',
+      ],
+      cta: 'INTAKE SIN INTERVENCIÓN',
+    },
+  ],
+};

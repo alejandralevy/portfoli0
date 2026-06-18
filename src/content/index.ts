@@ -82,13 +82,13 @@ export const copy: Record<Lang, Copy> = {
 export const projects: Record<Lang, Project[]> = {
   en: [
     { n: '01', name: 'SecurityScorecard', role: 'Senior Engineer · Technical Product Manager', year: '2023', desc: 'RBAC permissions + Smart Answer AI', color: '#1FB89E' },
-    { n: '02', name: 'WeCare',            role: 'Senior Software Engineer',                    year: '2024', desc: 'Orders management dashboard',       color: '#2F6BFF' },
+    { n: '02', name: 'WeCare',            role: 'Senior Software Engineer',                    year: '2024', desc: 'Orders management dashboard',       color: '#2F6BFF', href: '/we-care' },
     { n: '03', name: 'Decentraland',      role: 'Software Engineer',                           year: '2022', desc: 'Top Scenes platform',                color: '#FF2D55', href: '/decentraland' },
     { n: '04', name: 'Tardeo Argentino',  role: 'Engineering · Design',                        year: '2025', desc: 'Event platform',                     color: '#E0922F' },
   ],
   es: [
     { n: '01', name: 'SecurityScorecard', role: 'Senior Engineer · Technical Product Manager', year: '2023', desc: 'Permisos RBAC + Smart Answer AI',      color: '#1FB89E' },
-    { n: '02', name: 'WeCare',            role: 'Senior Software Engineer',                    year: '2024', desc: 'Dashboard de gestión de pedidos',      color: '#2F6BFF' },
+    { n: '02', name: 'WeCare',            role: 'Senior Software Engineer',                    year: '2024', desc: 'Dashboard de gestión de pedidos',      color: '#2F6BFF', href: '/we-care' },
     { n: '03', name: 'Decentraland',      role: 'Software Engineer',                           year: '2022', desc: 'Plataforma Top Scenes',                color: '#FF2D55', href: '/decentraland' },
     { n: '04', name: 'Tardeo Argentino',  role: 'Ingeniería · Diseño',                         year: '2025', desc: 'Plataforma de eventos',                color: '#E0922F' },
   ],

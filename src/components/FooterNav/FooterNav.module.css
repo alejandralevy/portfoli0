@@ -20,14 +20,14 @@
 .card {
   text-decoration: none;
   color: var(--color-ink);
+  background: #FBFAF5;
   border: 1px solid var(--color-divider);
   border-radius: 16px;
   padding: clamp(22px, 2.6vw, 30px);
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  background: #FBFAF5;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  gap: 6px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .card[data-dir='back']:hover {
@@ -44,6 +44,11 @@
   transform: translateY(-3px);
 }
 
+.card[data-dir='next'] {
+  align-items: flex-end;
+  text-align: right;
+}
+
 .sub {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -51,7 +56,9 @@
   opacity: 0.6;
 }
 
-.card[data-dir='next'] {
-  align-items: flex-end;
-  text-align: right;
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2.8vw, 30px);
+  font-weight: 300;
+  letter-spacing: -0.015em;
 }
