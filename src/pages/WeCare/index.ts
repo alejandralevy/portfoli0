@@ -1,0 +1,1 @@
+export { WeCare } from './WeCare';

@@ -222,8 +222,10 @@ export function Decentraland() {
           <FooterNav
             lang={lang}
             eyebrow={t.navEyebrow}
+            backSub={t.backSub}
             backLabel={t.backHome}
             backHref="/"
+            nextSub={t.nextSub}
             nextLabel={t.nextProj}
             nextHref="/tardeo-argentino"
             nextColor={colors.projects.tardeoArgentino}

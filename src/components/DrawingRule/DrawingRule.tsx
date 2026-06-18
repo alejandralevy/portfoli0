@@ -3,9 +3,10 @@ import styles from './DrawingRule.module.css';
 
 interface DrawingRuleProps {
   variant?: 'scale' | 'gradient';
+  style?: React.CSSProperties;
 }
 
-export function DrawingRule({ variant = 'scale' }: DrawingRuleProps) {
+export function DrawingRule({ variant = 'scale', style }: DrawingRuleProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,5 +34,5 @@ export function DrawingRule({ variant = 'scale' }: DrawingRuleProps) {
     return () => observer.disconnect();
   }, [variant]);
 
-  return <div ref={ref} className={variant === 'gradient' ? styles.gradient : styles.rule} />;
+  return <div ref={ref} className={variant === 'gradient' ? styles.gradient : styles.rule} style={style} />;
 }
