@@ -15,10 +15,10 @@ export const colors = {
   available: '#5B8C5A',
 
   projects: {
-    securityScorecard: '#1FB89E',
+    securityScorecard: '#5C45E0',
     weCare: '#2F6BFF',
     decentraland: '#FF2D55',
-    tardeoArgentino: '#E0922F',
+    tardeoArgentino: '#FF2E9D',
   },
 } as const;
 

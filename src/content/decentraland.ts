@@ -2,6 +2,9 @@ import type { Lang } from '../types';
 
 interface DclCopy {
   eyebrow: string;
+  status: string;
+  viewLive: string;
+  viewCode: string;
   heroStatement: string;
   ctxEyebrow: string;
   ctxHead: string;
@@ -26,7 +29,10 @@ interface DclCopy {
 
 export const dclCopy: Record<Lang, DclCopy> = {
   en: {
-    eyebrow: 'Senior Software Engineer · 2026',
+    eyebrow: 'Senior Software Engineer · React · TypeScript · 2022',
+    status: 'Shipped to production',
+    viewLive: 'Top Scenes',
+    viewCode: 'View the code',
     heroStatement: 'What I shipped at Decentraland: a shared component library, the public Top Scenes app built on top of it, and a set of Creator Hub features.',
     ctxEyebrow: 'Scope',
     ctxHead: 'Two distinct efforts',
@@ -42,14 +48,17 @@ export const dclCopy: Record<Lang, DclCopy> = {
     featNote: 'Editable — swap titles, copy and screenshots for your real Creator Hub features.',
     stackEyebrow: 'Stack',
     navEyebrow: 'Keep exploring',
-    backSub: '← All projects',
+    backSub: 'All projects',
     backHome: 'Back to portfolio',
-    nextSub: 'Next project →',
+    nextSub: 'Next project',
     nextProj: 'Tardeo Argentino',
     avail: 'Open to freelance — short & long term',
   },
   es: {
-    eyebrow: 'Senior Software Engineer · 2026',
+    eyebrow: 'Senior Software Engineer · React · TypeScript · 2022',
+    status: 'En producción',
+    viewLive: 'Top Scenes',
+    viewCode: 'Ver el código',
     heroStatement: 'Lo que construí en Decentraland: una librería de componentes compartida, el app público de Top Scenes armado encima de ella, y un set de features del Creator Hub.',
     ctxEyebrow: 'Alcance',
     ctxHead: 'Dos esfuerzos distintos',
@@ -65,9 +74,9 @@ export const dclCopy: Record<Lang, DclCopy> = {
     featNote: 'Editable — reemplazá títulos, textos y screenshots por tus features reales del Creator Hub.',
     stackEyebrow: 'Stack',
     navEyebrow: 'Seguí explorando',
-    backSub: '← Todos los proyectos',
+    backSub: 'Todos los proyectos',
     backHome: 'Volver al portfolio',
-    nextSub: 'Siguiente proyecto →',
+    nextSub: 'Siguiente proyecto',
     nextProj: 'Tardeo Argentino',
     avail: 'Disponible para freelance — corto y largo plazo',
   },

@@ -1,0 +1,1 @@
+export { Tardeo } from './Tardeo';

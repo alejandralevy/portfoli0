@@ -3,18 +3,13 @@ import type { Lang } from '../../types';
 import { BreadcrumbBar } from '../../components/BreadcrumbBar';
 import { BrowserMockup } from '../../components/BrowserMockup';
 import { DrawingRule } from '../../components/DrawingRule';
+import { CodeButton } from '../../components/CodeButton';
 import { FooterNav } from '../../components/FooterNav';
 import { Reveal } from '../../components/Reveal/Reveal';
 import { Tag } from '../../components/Tag';
 import { dclCopy, p1points, p1tags, features, stack } from '../../content/decentraland';
 import { colors } from '../../tokens';
 import styles from './Decentraland.module.css';
-
-const GitHubIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style={{ flex: 'none' }}>
-    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" />
-  </svg>
-);
 
 const ImageSlot = ({ label, height }: { label: string; height: string }) => (
   <div className={styles.imageSlot} style={{ height }}>
@@ -61,24 +56,36 @@ export function Decentraland() {
           <div className={styles.frameInner}>
 
             {/* ===== HERO ===== */}
-            <Reveal delay={100}><p className={styles.eyebrow}>{t.eyebrow}</p></Reveal>
-            <Reveal delay={180}><h1 className={styles.h1}>Decentraland</h1></Reveal>
-            <Reveal delay={280}><p className={styles.heroStatement}>{t.heroStatement}</p></Reveal>
-            <Reveal delay={380}>
-              <div className={styles.heroCtas}>
-                <a
-                  href="https://decentraland.org/top-scenes"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.ctaBtn}
-                >
-                  View it live <span className={styles.ctaArrow}>↗</span>
-                </a>
+            <Reveal delay={100}>
+              <div className={styles.heroMeta}>
+                <p className={styles.eyebrow}>{t.eyebrow}</p>
+                <span className={styles.statusBadge}>
+                  <span className={styles.statusDot} />
+                  {t.status}
+                </span>
               </div>
             </Reveal>
-            <Reveal delay={460}>
+            <Reveal delay={180}><h1 className={styles.h1}>Decentraland</h1></Reveal>
+            <Reveal delay={280}><p className={styles.heroStatement}>{t.heroStatement}</p></Reveal>
+            <Reveal delay={360}>
               <div className={styles.tagRow}>
                 {p1tags.map(tag => <Tag key={tag} dark>{tag}</Tag>)}
+              </div>
+            </Reveal>
+            <Reveal delay={440}>
+              <div className={styles.heroCta}>
+                <CodeButton
+                  href="https://decentraland.org/top-scenes"
+                  label={t.viewLive}
+                  variant="primary"
+                  accentHover="#FF2D55"
+                />
+                <CodeButton
+                  href="https://github.com/decentraland"
+                  label={t.viewCode}
+                  accentColor="rgba(255,45,85,.45)"
+                  accentHover="#FF2D55"
+                />
               </div>
             </Reveal>
 
@@ -138,12 +145,8 @@ export function Decentraland() {
 
               <Reveal>
                 <div className={styles.repoRow}>
-                  <a href="https://github.com/decentraland/ui2" target="_blank" rel="noopener noreferrer" className={styles.repoLink}>
-                    <GitHubIcon /> decentraland/ui2 <span>↗</span>
-                  </a>
-                  <a href="https://github.com/decentraland/top-scenes" target="_blank" rel="noopener noreferrer" className={styles.repoLink}>
-                    <GitHubIcon /> decentraland/top-scenes <span>↗</span>
-                  </a>
+                  <CodeButton href="https://github.com/decentraland/ui2" label="decentraland/ui2" accentColor="rgba(255,45,85,.45)" accentHover="#FF2D55" />
+                  <CodeButton href="https://github.com/decentraland/top-scenes" label="decentraland/top-scenes" accentColor="rgba(255,45,85,.45)" accentHover="#FF2D55" />
                 </div>
               </Reveal>
             </section>
@@ -194,9 +197,7 @@ export function Decentraland() {
 
               <Reveal>
                 <div className={styles.repoRow}>
-                  <a href="https://github.com/decentraland/creator-hub" target="_blank" rel="noopener noreferrer" className={styles.repoLink}>
-                    <GitHubIcon /> decentraland/creator-hub <span>↗</span>
-                  </a>
+                  <CodeButton href="https://github.com/decentraland/creator-hub" label="decentraland/creator-hub" accentColor="rgba(255,45,85,.45)" accentHover="#FF2D55" />
                 </div>
               </Reveal>
             </section>
