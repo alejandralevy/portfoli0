@@ -31,9 +31,9 @@
 }
 
 .card[data-dir='back']:hover {
-  background: var(--color-ink);
+  background: #1C1B19;
   color: #F4F1EB;
-  border-color: var(--color-ink);
+  border-color: #1C1B19;
   transform: translateY(-3px);
 }
 

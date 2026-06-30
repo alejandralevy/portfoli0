@@ -20,7 +20,7 @@ export function FooterNav({ lang: _lang, eyebrow, backSub, backLabel, backHref, 
       <p className={styles.eyebrow}>{eyebrow}</p>
       <div className={styles.grid}>
         <Link to={backHref} className={styles.card} data-dir="back">
-          <span className={styles.sub}>{backSub}</span>
+          <span className={styles.sub}>← {backSub}</span>
           <span className={styles.title}>{backLabel}</span>
         </Link>
         <Link
@@ -29,7 +29,7 @@ export function FooterNav({ lang: _lang, eyebrow, backSub, backLabel, backHref, 
           data-dir="next"
           style={{ '--next-color': nextColor } as React.CSSProperties}
         >
-          <span className={styles.sub}>{nextSub}</span>
+          <span className={styles.sub}>{nextSub} →</span>
           <span className={styles.title}>{nextLabel}</span>
         </Link>
       </div>

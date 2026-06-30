@@ -131,6 +131,13 @@
 }
 
 /* ===== HERO ===== */
+.heroMeta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -138,6 +145,35 @@
   text-transform: uppercase;
   color: var(--color-accent);
   margin: 0;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #FF2D55;
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  animation: dcl-pulse 1.8s ease-in-out infinite;
+  flex: none;
+}
+
+@keyframes dcl-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.7); }
 }
 
 .h1 {
@@ -160,36 +196,12 @@
   margin: 22px 0 0;
 }
 
-.heroCtas {
+.heroCta {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 2.4vw, 26px);
+  gap: clamp(12px, 2vw, 20px);
   flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.ctaBtn {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 13.5px;
-  color: #161319;
-  background: var(--color-accent);
-  text-decoration: none;
-  border-radius: 999px;
-  padding: 11px 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
-}
-
-.ctaBtn:hover {
-  background: #FFFFFF;
-  transform: translateY(-2px);
-}
-
-.ctaArrow {
-  font-family: var(--font-mono);
+  margin-top: clamp(20px, 2.4vw, 28px);
 }
 
 .tagRow {
@@ -344,26 +356,6 @@
   margin-top: clamp(28px, 3.4vw, 40px);
 }
 
-.repoLink {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  color: #E4E0DA;
-  text-decoration: none;
-  padding: 9px 16px;
-  border: 1px solid rgba(255, 45, 85, 0.45);
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
-.repoLink:hover {
-  background: var(--color-accent);
-  color: #161319;
-  border-color: var(--color-accent);
-}
 
 /* ===== FEATURES ===== */
 .featNote {
@@ -526,8 +518,9 @@
 .availDot {
   width: 7px;
   height: 7px;
-  border-radius: 2px;
-  background: var(--color-accent);
+  border-radius: 50%;
+  background: var(--color-available);
+  flex: none;
 }
 
 /* ===== KEYFRAMES ===== */

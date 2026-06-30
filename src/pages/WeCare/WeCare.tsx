@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Lang } from '../../types';
 import { BreadcrumbBar } from '../../components/BreadcrumbBar';
+import { CodeButton } from '../../components/CodeButton';
 import { DrawingRule } from '../../components/DrawingRule';
 import { FooterNav } from '../../components/FooterNav';
 import { Reveal } from '../../components/Reveal/Reveal';
@@ -63,6 +64,16 @@ export function WeCare() {
                 <Reveal delay={320}>
                   <div className={styles.pillRow}>
                     {skills.map(s => <span key={s} className={styles.pill}>{s}</span>)}
+                  </div>
+                </Reveal>
+                <Reveal delay={400}>
+                  <div className={styles.heroCta}>
+                    <CodeButton
+                      href="#"
+                      label={t.viewLive}
+                      variant="primary"
+                      accentHover="#2F6BFF"
+                    />
                   </div>
                 </Reveal>
               </div>

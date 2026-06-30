@@ -1,0 +1,1 @@
+export { SecurityScorecard } from './SecurityScorecard';

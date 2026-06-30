@@ -1,0 +1,45 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--ext-text);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, filter 0.2s ease, transform 0.2s ease;
+}
+
+/* ── outlined (repo links) ── */
+.outlined {
+  background: transparent;
+  border: 1px solid var(--ext-accent, rgba(92,69,224,.45));
+}
+
+.outlined:hover {
+  background: var(--ext-hover, #7C65F5);
+  border-color: var(--ext-hover, #7C65F5);
+  color: #161319;
+}
+
+.outlined:hover .icon {
+  color: #161319;
+}
+
+/* ── primary (live site) ── */
+.primary {
+  background: var(--ext-hover, #7C65F5);
+  border: 1px solid var(--ext-hover, #7C65F5);
+}
+
+.primary:hover {
+  filter: brightness(0.88);
+  transform: translateY(-2px);
+}
+
+.icon {
+  flex: none;
+  transition: color 0.2s ease;
+}
