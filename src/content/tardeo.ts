@@ -83,7 +83,7 @@ export const tardeoCopy: Record<Lang, TardeoCopy> = {
     backSub: 'All projects',
     backHome: 'Back to portfolio',
     nextSub: 'Next project',
-    nextProj: 'SecurityScorecard',
+    nextProj: 'Decentraland',
     avail: 'Open to freelance — short & long term',
   },
   es: {
@@ -125,7 +125,7 @@ export const tardeoCopy: Record<Lang, TardeoCopy> = {
     backSub: 'Todos los proyectos',
     backHome: 'Volver al portfolio',
     nextSub: 'Siguiente proyecto',
-    nextProj: 'SecurityScorecard',
+    nextProj: 'Decentraland',
     avail: 'Disponible para freelance — corto y largo plazo',
   },
 };

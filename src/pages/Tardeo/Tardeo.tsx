@@ -323,8 +323,8 @@ export function Tardeo() {
             backHref="/"
             nextSub={t.nextSub}
             nextLabel={t.nextProj}
-            nextHref="/security-scorecard"
-            nextColor={colors.projects.securityScorecard}
+            nextHref="/decentraland"
+            nextColor={colors.projects.decentraland}
           />
         </Reveal>
 

@@ -6,25 +6,18 @@ interface SscCopy {
   heroStatement: string;
   introCopy1: string;
   introCopy2: string;
-  introNote: string;
   aKicker: string;
   aHead: string;
   a1label: string;
   a1head: string;
   a1copy: string;
-  a1drop: string;
   beforeTag: string;
   afterTag: string;
   a2label: string;
   a2head: string;
   a2copy: string;
-  fromLabel: string;
-  fromDesc: string;
-  toLabel: string;
-  toDesc: string;
   decisionsLabel: string;
   videoLabel: string;
-  videoDrop: string;
   videoCaption: string;
   a3label: string;
   a3head: string;
@@ -32,11 +25,11 @@ interface SscCopy {
   a3note: string;
   bKicker: string;
   bHead: string;
+  bCopy: string;
   northStarLabel: string;
   northStar: string;
-  wfLabel: string;
-  wfDrop: string;
   techLabel: string;
+  bVideoLabel: string;
   closeKicker: string;
   closeStatement: string;
   fillIn: string;
@@ -72,42 +65,35 @@ export interface Step {
 
 export const sscCopy: Record<Lang, SscCopy> = {
   en: {
-    eyebrow: 'Senior Software Engineer · React · TypeScript · 2023 → 2024',
-    status: 'Shipped to production',
-    heroStatement: "I rebuilt SecurityScorecard's vendor-questionnaire product — migrating it off a slow legacy stack into the main platform, then leading the build with a small team while writing the code myself.",
-    introCopy1: "Two pieces of work at SecurityScorecard. First I designed the platform's role-based access model (RBAC) — where my call was to ship locked roles before a permission matrix. Then came the bigger one: migrating and rebuilding the entire questionnaires product off atlas.io, an inherited tool that was slow, dated, and painful to use.",
+    eyebrow: 'Senior Software Engineer & Technical Product Manager · 2024',
+    status: 'Live in production',
+    heroStatement: "Two years at SecurityScorecard shaped me into a technical product manager — first by proposing the right solutions, then by leading an IT team while staying hands-on as the developer building those same features.",
+    introCopy1: "At SecurityScorecard, I chose to build fast and test — shipping locked roles first and letting real usage guide what came next, cutting the platform's most common flow from ~15 clicks to 2. Then I led the bigger effort: migrating and rebuilding the entire questionnaires product off atlas.io, an inherited tool that was slow, dated, and painful for vendors to use — leading the team while staying hands-on as the developer building it.",
     introCopy2: "I'm an engineer who happens to think in product — so these aren't two stories about features. They're about the calls I made and the code I shipped to back them.",
-    introNote: 'Ordered by impact, not chronology — the migration comes first.',
-    aKicker: 'Story A · Questionnaires',
+    aKicker: 'Project B · Questionnaires',
     aHead: 'Migrating and rebuilding the whole product',
     a1label: 'The problem',
     a1head: 'A separate product nobody could use',
     a1copy: "The questionnaires lived on atlas.io — a separate app with its own login, disconnected from the platform. Old framework, slow loads, and a UI that made no sense: vendors couldn't tell where they were or what to do next.",
-    a1drop: 'Drop the BEFORE walkthrough (video / GIF)',
     beforeTag: 'Before · atlas.io',
     afterTag: 'After · securityscorecard.io',
     a2label: 'Engineering core',
     a2head: 'The migration',
-    a2copy: "I migrated the whole product into securityscorecard.io and rebuilt the front end in React + TypeScript. The goal wasn't a port — it was making it fast, consistent with the platform, and maintainable.",
-    fromLabel: 'From · legacy',
-    fromDesc: 'Old framework · slow · dated',
-    toLabel: 'To · rebuilt',
-    toDesc: 'React + TypeScript · fast · native to the platform',
+    a2copy: "Because I'd already shipped features on this product, I was the one asked to lead the migration. I collaborated on the architecture decisions and led <strong>a team of 5 developers over 6 months</strong> who helped build it, while staying hands-on myself building components.",
     decisionsLabel: 'Engineering decisions',
     videoLabel: 'Improvements · video',
-    videoDrop: 'Drop the 18s product demo (video / GIF frame)',
     videoCaption: 'Improvements, shipped.',
     a3label: 'Shipping + leading',
     a3head: 'UX improvements, and leading the team',
     a3copy: 'Once it was migrated, I shipped a series of UX improvements — and led 5 engineers while staying hands-on in the codebase. I drew the flows, owned the roadmap, wrote the tickets and worked through the edge cases. But the output was always shipped code, not slides.',
     a3note: 'No PM assigned — so I also held the product side (roadmap, specs, edge cases) to keep the team unblocked.',
-    bKicker: 'Story B · RBAC',
+    bKicker: 'Project A · RBAC',
     bHead: 'A permission model for the whole platform',
+    bCopy: "SecurityScorecard had no real access control: every user was admin, normal user, or guest. The team wanted to jump straight to a fully custom permission model. I made the call to <strong>ship first</strong>: predefined roles with permissions baked in, covering the largest share of users on day one. Only after real usage validated the gaps did I open it up, surfacing every permission so admins could edit roles and build custom ones.",
     northStarLabel: 'North star',
     northStar: 'Make the 80% case take 2 clicks.',
-    wfLabel: 'Wireframes · interactive',
-    wfDrop: 'Drop RBAC wireframes',
     techLabel: 'What made it engineering, not PM',
+    bVideoLabel: 'RBAC in action · video',
     closeKicker: 'Takeaway',
     closeStatement: "I can take a product that's technically rough and own it end-to-end — the migration, the architecture, the team, and the product calls that decide what's worth building.",
     fillIn: 'fill in',
@@ -118,46 +104,39 @@ export const sscCopy: Record<Lang, SscCopy> = {
     nextProj: 'WeCare',
     avail: 'Open to freelance — short & long term',
     liveSite: 'securityscorecard.com',
-    qLandingLabel: 'See the live Questionnaires product',
+    qLandingLabel: "See SecurityScorecard's Questionnaires solution",
     rbacBlogLabel: "Read SecurityScorecard's RBAC write-up",
   },
   es: {
-    eyebrow: 'Senior Software Engineer · React · TypeScript · 2023 → 2024',
+    eyebrow: 'Senior Software Engineer & Technical Product Manager · 2024',
     status: 'En producción',
-    heroStatement: 'Reconstruí el producto de cuestionarios para vendors de SecurityScorecard — lo migré de un stack legacy lento hacia la plataforma principal, y lideré el desarrollo con un equipo chico mientras escribía el código yo misma.',
-    introCopy1: 'Dos trabajos en SecurityScorecard. Primero diseñé el modelo de permisos de la plataforma (RBAC) — donde mi decisión fue shipear roles bloqueados antes que una matriz de permisos. Después vino el grande: migrar y reconstruir el producto de cuestionarios completo desde atlas.io, una herramienta heredada lenta, anticuada y dolorosa de usar.',
+    heroStatement: 'Dos años en SecurityScorecard me formaron como technical product manager — primero proponiendo las mejores soluciones, luego liderando un equipo de IT mientras seguía siendo hands-on developer en esas mismas features.',
+    introCopy1: 'En SecurityScorecard, mi decisión fue construir rápido y testear — shipeando roles bloqueados primero y dejando que el uso real guiara los próximos pasos, lo que redujo el flujo más común de la plataforma de ~15 clics a 2. Después lideré el esfuerzo más grande: migrar y reconstruir el producto de cuestionarios completo desde atlas.io, una herramienta heredada lenta, anticuada y dolorosa de usar para los vendors — liderando al equipo mientras seguía siendo hands-on como developer construyéndolo.',
     introCopy2: 'Soy una ingeniera que piensa en producto — así que esto no son dos historias sobre features. Son las decisiones que tomé y el código que escribí para sostenerlas.',
-    introNote: 'Ordenado por impacto, no por cronología — la migración va primero.',
-    aKicker: 'Historia A · Cuestionarios',
+    aKicker: 'Proyecto B · Cuestionarios',
     aHead: 'Migrar y reconstruir el producto completo',
     a1label: 'El problema',
     a1head: 'Un producto separado que nadie podía usar',
     a1copy: 'Los cuestionarios vivían en atlas.io — una app aparte con su propio login, desconectada de la plataforma. Framework viejo, cargas lentas, y una UI que no se entendía: el vendor no sabía dónde estaba ni qué hacer.',
-    a1drop: 'Soltá el video del BEFORE (video / GIF)',
     beforeTag: 'Before · atlas.io',
     afterTag: 'After · securityscorecard.io',
     a2label: 'Núcleo de ingeniería',
     a2head: 'La migración',
-    a2copy: 'Migré el producto completo a securityscorecard.io y reconstruí el front en React + TypeScript. El objetivo no era portar — era hacerlo rápido, consistente con la plataforma y mantenible.',
-    fromLabel: 'Desde · legacy',
-    fromDesc: 'Framework viejo · lento · anticuado',
-    toLabel: 'Hacia · reconstruido',
-    toDesc: 'React + TypeScript · rápido · nativo a la plataforma',
+    a2copy: 'Como ya había shippeado features en este producto, fui la persona elegida para liderar la migración. Colaboré en las decisiones de arquitectura y lideré a <strong>un equipo de 5 developers durante 6 meses</strong> que ayudaron a construirla, mientras seguía siendo hands-on yo misma, creando componentes.',
     decisionsLabel: 'Decisiones de ingeniería',
     videoLabel: 'Mejoras · video',
-    videoDrop: 'Soltá el demo de 18s (video / frame de GIF)',
     videoCaption: 'Mejoras, shipeadas.',
     a3label: 'Shipping + liderazgo',
     a3head: 'Mejoras de UX, y liderar al equipo',
     a3copy: 'Una vez migrado, shipeé una serie de mejoras de UX — y lideré a 5 ingenieros sin soltar el código. Dibujé los flujos, fui dueña del roadmap, escribí los tickets y resolví los edge cases. Pero lo que salía siempre era código, no slides.',
     a3note: 'Sin PM asignado — así que también sostuve el lado de producto (roadmap, specs, edge cases) para mantener al equipo desbloqueado.',
-    bKicker: 'Historia B · RBAC',
+    bKicker: 'Proyecto A · RBAC',
     bHead: 'Un modelo de permisos para toda la plataforma',
+    bCopy: 'SecurityScorecard no tenía control de accesos real: cada usuario era admin, usuario normal o guest. El equipo quería ir directo a un modelo de permisos totalmente custom. Mi decisión fue <strong>shippear primero</strong>: roles predefinidos con permisos baked-in, cubriendo a la mayor cantidad de usuarios desde el día uno. Recién después de validar con uso real abrí el modelo, mostrando todos los permisos para que los admins pudieran editar roles y crear roles custom.',
     northStarLabel: 'North star',
     northStar: 'Que el caso 80% se resuelva en 2 clics.',
-    wfLabel: 'Wireframes · interactivo',
-    wfDrop: 'Soltá wireframes RBAC',
     techLabel: 'Lo que lo hace ingeniería, no PM',
+    bVideoLabel: 'RBAC en acción · video',
     closeKicker: 'Conclusión',
     closeStatement: 'Puedo tomar un producto técnicamente difícil y sostenerlo de punta a punta — la migración, la arquitectura, el equipo, y las decisiones de producto que definen qué vale la pena construir.',
     fillIn: 'completar',
@@ -168,12 +147,12 @@ export const sscCopy: Record<Lang, SscCopy> = {
     nextProj: 'WeCare',
     avail: 'Disponible para freelance — corto y largo plazo',
     liveSite: 'securityscorecard.com',
-    qLandingLabel: 'Ver el producto Questionnaires en vivo',
+    qLandingLabel: 'Ver la solución de Questionnaires de SecurityScorecard',
     rbacBlogLabel: 'Leé el artículo de RBAC de SecurityScorecard',
   },
 };
 
-export const heroTags = ['React', 'TypeScript', 'React Query', 'React Hook Form', 'REST APIs', 'SQL'];
+export const heroTags = ['React', 'TypeScript', 'React Hook Form', 'React Query', 'Storybook'];
 
 export const decoPositions = ['14%', '32%', '50%', '68%', '86%'];
 
@@ -192,27 +171,27 @@ export const problems: Record<Lang, string[]> = {
 
 export const threads: Record<Lang, Thread[]> = {
   en: [
-    { tag: 'Story A', title: 'Questionnaires — migration + rebuild', desc: 'Moved the whole product off atlas.io into the platform and rebuilt the front end in React + TypeScript.' },
-    { tag: 'Story B', title: 'RBAC — platform permission model', desc: 'Designed access control across every module, shipping locked roles before a permission matrix.' },
+    { tag: 'Project A', title: 'RBAC — platform permission model', desc: 'Designed access control across every module, shipping locked roles before a permission matrix.' },
+    { tag: 'Project B', title: 'Questionnaires — migration + rebuild', desc: 'Moved the whole product off atlas.io into the platform and rebuilt the front end in React + TypeScript.' },
   ],
   es: [
-    { tag: 'Historia A', title: 'Cuestionarios — migración + rebuild', desc: 'Migré el producto completo desde atlas.io a la plataforma y reconstruí el front en React + TypeScript.' },
-    { tag: 'Historia B', title: 'RBAC — modelo de permisos', desc: 'Diseñé el control de acceso de todos los módulos, shipeando roles bloqueados antes que una matriz.' },
+    { tag: 'Proyecto A', title: 'RBAC — modelo de permisos', desc: 'Diseñé el control de acceso de todos los módulos, shipeando roles bloqueados antes que una matriz.' },
+    { tag: 'Proyecto B', title: 'Cuestionarios — migración + rebuild', desc: 'Migré el producto completo desde atlas.io a la plataforma y reconstruí el front en React + TypeScript.' },
   ],
 };
 
 export const decisions: Record<Lang, Decision[]> = {
   en: [
-    { tag: 'React Query', text: 'Server state, autosave and caching — so moving between questionnaire sections never re-fetched or lost answers.', todo: false },
-    { tag: 'React Hook Form', text: 'Hundreds of fields per questionnaire, validated per-section without re-rendering the whole form.', todo: false },
+    { tag: 'React Hook Form', text: 'Managed every field in the questionnaire, so answers updated <strong>optimistically</strong> in the UI before the change ever reached the API.', todo: false },
+    { tag: 'React Query', text: 'Used mutations for every piece of state that talked to the server, keeping caching, sync and server state in one place.', todo: false },
+    { tag: 'Storybook', text: 'Built a design system covering every component, so the team could reuse them instead of rebuilding UI per screen.', todo: false },
     { tag: 'Platform', text: "Folded into the platform's auth, navigation and design system, so it stopped feeling like a separate app.", todo: false },
-    { tag: 'Hardest part', text: 'The toughest technical piece —', todo: true },
   ],
   es: [
-    { tag: 'React Query', text: 'Server state, autosave y caching — así moverse entre secciones del cuestionario nunca re-fetcheaba ni perdía respuestas.', todo: false },
-    { tag: 'React Hook Form', text: 'Cientos de campos por cuestionario, validados por sección sin re-renderizar el formulario completo.', todo: false },
+    { tag: 'React Hook Form', text: 'Manejaba cada campo del cuestionario, para que las respuestas se actualizaran de forma <strong>optimista</strong> en la UI antes de que el cambio llegara a la API.', todo: false },
+    { tag: 'React Query', text: 'Mutations para cada pedazo de estado que hablaba con el servidor, manteniendo caching, sync y server state en un solo lugar.', todo: false },
+    { tag: 'Storybook', text: 'Construí un design system que cubría cada componente, para que el equipo pudiera reutilizarlos en vez de reconstruir la UI pantalla por pantalla.', todo: false },
     { tag: 'Plataforma', text: 'Integrado al auth, navegación y design system de la plataforma, para que dejara de sentirse como una app aparte.', todo: false },
-    { tag: 'Lo más difícil', text: 'La parte técnica más difícil —', todo: true },
   ],
 };
 
@@ -221,51 +200,51 @@ export const steps: Record<Lang, Step[]> = {
     {
       tag: 'Step 1 · Requested',
       metric: '~15 clicks',
-      title: 'The matrix they brought',
-      desc: "Designer + CS team came with a permission matrix per user — every user × every permission, 12 columns, no mental model. CS managers: 'I just need to know if this person is an analyst or an admin.'",
+      title: 'Build your own roles, from scratch',
+      desc: "Customers asked to build their own roles from the ground up: create a role, then check off every permission for it, one at a time, to build a fully custom permission matrix.",
     },
     {
       tag: 'Step 2 · My pivot',
       metric: '2 clicks',
-      title: 'Locked roles, MVP',
-      desc: "They're thinking in roles, not permissions. I shipped fixed roles with baked-in permissions — locked, no editing. 80%+ of cases covered day one. 'Design for the 80% first.'",
+      title: 'More roles, not a matrix',
+      desc: "I paused. Building a role that way took real time, and most customers needed roughly the same handful of roles. I made the call to design for <strong>the 80% case</strong> first: ship a richer set of predefined roles, like Marketing Manager or Questionnaires Reviewer, covering real use cases without touching a matrix.",
     },
     {
       tag: 'Step 3 · Phase 2',
       metric: 'after validation',
-      title: 'Editable matrix',
-      desc: "Once real CS managers were using it, the feedback was concrete (a 'CS Lead' between Analyst and Admin). Only then I added the custom-role editor — as a power feature, not the default.",
+      title: 'Editable matrix, fully custom',
+      desc: "In a second iteration, I built the <strong>editable permission matrix</strong>, giving customers full control to fine-tune roles or create entirely custom ones on top of the predefined set.",
     },
   ],
   es: [
     {
       tag: 'Paso 1 · Pedido',
       metric: '~15 clics',
-      title: 'La matriz que trajeron',
-      desc: "Designer + equipo de CS vinieron con una matriz de permisos por usuario — cada usuario × cada permiso, 12 columnas, sin modelo mental. CS managers: 'Solo necesito saber si esta persona es analyst o admin.'",
+      title: 'Crear tus propios roles, desde cero',
+      desc: "Los clientes pedían crear sus propios roles desde cero: crear un rol y tildar permiso por permiso hasta armar una matriz de permisos totalmente custom.",
     },
     {
       tag: 'Paso 2 · Mi pivot',
       metric: '2 clics',
-      title: 'Roles bloqueados, MVP',
-      desc: "Piensan en roles, no en permisos. Shipeé roles fijos con permisos baked-in — bloqueados, sin edición. 80%+ de los casos cubiertos el día uno. 'Diseñá para el 80% primero.'",
+      title: 'Más roles, no una matriz',
+      desc: "Frené. Armar un rol así llevaba tiempo real, y la mayoría de los clientes necesitaba más o menos los mismos roles. Mi decisión fue diseñar para <strong>el caso 80%</strong> primero: shippear un set más rico de roles predefinidos, como Marketing Manager o Questionnaires Reviewer, cubriendo los casos reales sin tocar una matriz.",
     },
     {
       tag: 'Paso 3 · Fase 2',
       metric: 'tras validar',
-      title: 'Matriz editable',
-      desc: "Una vez que los CS managers reales lo usaban, el feedback fue concreto (un 'CS Lead' entre Analyst y Admin). Recién ahí sumé el editor de roles custom — como power feature, no el default.",
+      title: 'Matriz editable, totalmente custom',
+      desc: "En una segunda iteración, construí la <strong>matriz de permisos editable</strong>, dando a los clientes control total para ajustar roles o crear roles completamente custom sobre el set predefinido.",
     },
   ],
 };
 
 export const techPoints: Record<Lang, string[]> = {
   en: [
-    'Built the roles / permissions data model and authorization checks across the platform — questionnaires, evidence locker, reports, billing, user management.',
-    'Role-gated UI in React + TypeScript, so components rendered or disabled by permission.',
+    'Built the <strong>roles and permissions data model</strong> and the authorization checks across the platform, covering questionnaires, evidence locker, reports, billing, and user management.',
+    'Wrote role-gated UI in React and TypeScript, so components render or disable based on permission.',
   ],
   es: [
-    'Construí el modelo de datos de roles / permisos y los checks de autorización en toda la plataforma — cuestionarios, evidence locker, reportes, billing, gestión de usuarios.',
-    'UI gateada por rol en React + TypeScript, con componentes renderizados o deshabilitados según permiso.',
+    'Construí el <strong>modelo de datos de roles y permisos</strong> y los checks de autorización en toda la plataforma, cubriendo cuestionarios, evidence locker, reportes, billing y gestión de usuarios.',
+    'Escribí la UI gateada por rol en React y TypeScript, con componentes que se renderizan o deshabilitan según el permiso.',
   ],
 };

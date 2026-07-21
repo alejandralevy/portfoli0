@@ -9,31 +9,17 @@ import { colors } from '../../tokens';
 import {
   weCareCopy,
   skills,
-  flowTools,
-  manualSteps,
   chosenPoints,
-  transformations,
-  mockupTabs,
   phases,
 } from '../../content/wecare';
 import styles from './WeCare.module.css';
 
 const RULE_COLOR = 'rgba(47, 107, 255, 0.3)';
 
-const ImageIcon = () => (
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <rect x="3" y="3" width="18" height="18" rx="2" />
-    <circle cx="8.5" cy="8.5" r="1.5" />
-    <polyline points="21 15 16 10 5 21" />
-  </svg>
-);
-
 export function WeCare() {
   const [lang, setLang] = useState<Lang>('en');
   const t = weCareCopy[lang];
-  const steps = manualSteps[lang];
   const points = chosenPoints[lang];
-  const transforms = transformations[lang];
   const phaseList = phases[lang];
 
   return (
@@ -87,7 +73,7 @@ export function WeCare() {
               <p className={styles.heroBio}>{t.heroBio}</p>
             </Reveal>
 
-            {/* ===== 01 THE PROBLEM ===== */}
+            {/* ===== 01 THE SOLUTION ===== */}
             <div className={styles.ruleWrap}>
               <DrawingRule style={{ '--rule-color': RULE_COLOR } as React.CSSProperties} />
             </div>
@@ -95,41 +81,6 @@ export function WeCare() {
               <Reveal>
                 <div className={styles.sectionLabel}>
                   <span className={styles.sectionN}>01</span>
-                  <span className={styles.sectionKicker}>{t.s1kicker}</span>
-                </div>
-                <h2 className={styles.h2}>{t.s1head}</h2>
-                <p className={styles.bodyText}>{t.s1body}</p>
-              </Reveal>
-              <Reveal>
-                <div className={styles.flowRow}>
-                  <span className={styles.flowActive}>Therapist order</span>
-                  {flowTools.map(tool => (
-                    <span key={tool} className={styles.flowGroup}>
-                      <span className={styles.flowArrow}>→</span>
-                      <span className={styles.flowPill}>{tool}</span>
-                    </span>
-                  ))}
-                </div>
-                <p className={styles.stepsLabel}>{t.flowLabel}</p>
-                <div className={styles.stepsRow}>
-                  {steps.map(s => (
-                    <span key={s} className={styles.stepPill}>
-                      <span className={styles.stepDot} />
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </Reveal>
-            </section>
-
-            {/* ===== 02 THE APPROACH ===== */}
-            <div className={styles.ruleWrap}>
-              <DrawingRule style={{ '--rule-color': RULE_COLOR } as React.CSSProperties} />
-            </div>
-            <section className={styles.section}>
-              <Reveal>
-                <div className={styles.sectionLabel}>
-                  <span className={styles.sectionN}>02</span>
                   <span className={styles.sectionKicker}>{t.s2kicker}</span>
                 </div>
                 <h2 className={styles.h2}>{t.s2head}</h2>
@@ -155,40 +106,14 @@ export function WeCare() {
               </Reveal>
             </section>
 
-            {/* ===== 03 THE OPPORTUNITY ===== */}
+            {/* ===== 02 THE PROTOTYPE ===== */}
             <div className={styles.ruleWrap}>
               <DrawingRule style={{ '--rule-color': RULE_COLOR } as React.CSSProperties} />
             </div>
             <section className={styles.section}>
               <Reveal>
                 <div className={styles.sectionLabel}>
-                  <span className={styles.sectionN}>03</span>
-                  <span className={styles.sectionKicker}>{t.s3kicker}</span>
-                </div>
-                <h2 className={styles.h2}>{t.s3head}</h2>
-                <p className={styles.bodyText}>{t.s3body}</p>
-              </Reveal>
-              <Reveal>
-                <div className={styles.oppGrid}>
-                  {transforms.map((tr, i) => (
-                    <div key={i} className={styles.oppCard}>
-                      <p className={styles.oppBefore}>{tr.before}</p>
-                      <span className={styles.oppArrow} aria-hidden="true">→</span>
-                      <p className={styles.oppAfter}>{tr.after}</p>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-            </section>
-
-            {/* ===== 04 THE PROTOTYPE ===== */}
-            <div className={styles.ruleWrap}>
-              <DrawingRule style={{ '--rule-color': RULE_COLOR } as React.CSSProperties} />
-            </div>
-            <section className={styles.section}>
-              <Reveal>
-                <div className={styles.sectionLabel}>
-                  <span className={styles.sectionN}>04</span>
+                  <span className={styles.sectionN}>02</span>
                   <span className={styles.sectionKicker}>{t.s4kicker}</span>
                 </div>
                 <h2 className={styles.h2}>{t.s4head}</h2>
@@ -204,38 +129,24 @@ export function WeCare() {
                     <span className={styles.chromeUrl}>wecare.app/orders</span>
                   </div>
                   <div className={styles.mockupBody}>
-                    <div className={styles.dropZone}>
-                      <span className={styles.dropIcon}><ImageIcon /></span>
-                      <span className={styles.dropLabel}>Drop the orders dashboard prototype</span>
-                    </div>
+                    <video
+                      src="/video/wecare.mov"
+                      controls
+                      playsInline
+                      style={{ width: '100%', height: 'clamp(260px,36vw,480px)', display: 'block', objectFit: 'cover', background: '#000' }}
+                    />
                   </div>
                 </div>
               </Reveal>
 
               <Reveal>
-                <div className={styles.thumbRow}>
-                  {mockupTabs.map(tab => (
-                    <div key={tab} className={styles.thumb}>
-                      <div className={styles.thumbChrome}>
-                        <span className={styles.chromeDot} data-accent />
-                        <span className={styles.chromeDot} />
-                        <span className={styles.chromeDot} />
-                        <span className={styles.thumbLabel}>{tab}</span>
-                      </div>
-                      <div className={styles.thumbBody}>
-                        <div className={styles.dropZoneSmall}>
-                          <span className={styles.dropIcon}><ImageIcon /></span>
-                          <span className={styles.dropLabelSmall}>Drop a prototype screen</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-
-              <Reveal>
                 <div className={styles.protoCta}>
-                  <button className={styles.ctaBtn}>{t.ctaBtn}</button>
+                  <CodeButton
+                    href="#"
+                    label={t.ctaBtn}
+                    variant="primary"
+                    accentHover="#2F6BFF"
+                  />
                   <span className={styles.ctaNote}>
                     <span className={styles.ctaNoteDot} />
                     {t.ctaNote}
@@ -244,14 +155,14 @@ export function WeCare() {
               </Reveal>
             </section>
 
-            {/* ===== 05 THE ROADMAP ===== */}
+            {/* ===== 03 HOW IT'S BUILT ===== */}
             <div className={styles.ruleWrap}>
               <DrawingRule style={{ '--rule-color': RULE_COLOR } as React.CSSProperties} />
             </div>
             <section className={styles.section}>
               <Reveal>
                 <div className={styles.sectionLabel}>
-                  <span className={styles.sectionN}>05</span>
+                  <span className={styles.sectionN}>03</span>
                   <span className={styles.sectionKicker}>{t.s5kicker}</span>
                 </div>
                 <h2 className={styles.h2}>{t.s5head}</h2>
@@ -277,12 +188,6 @@ export function WeCare() {
                   ))}
                 </div>
               </Reveal>
-              <Reveal>
-                <div className={styles.statusBar}>
-                  <span className={styles.statusDot} />
-                  {t.statusBar}
-                </div>
-              </Reveal>
             </section>
 
           </div>
@@ -298,8 +203,8 @@ export function WeCare() {
             backHref="/"
             nextSub={t.nextSub}
             nextLabel={t.nextLabel}
-            nextHref="/decentraland"
-            nextColor={colors.projects.decentraland}
+            nextHref="/tardeo-argentino"
+            nextColor={colors.projects.tardeoArgentino}
           />
         </Reveal>
 

@@ -18,12 +18,6 @@ import {
 import { colors } from '../../tokens';
 import styles from './SecurityScorecard.module.css';
 
-const ImageSlot = ({ label, height }: { label: string; height: string }) => (
-  <div className={styles.imageSlot} style={{ height }}>
-    <span className={styles.imageSlotLabel}>{label}</span>
-  </div>
-);
-
 export function SecurityScorecard() {
   const [lang, setLang] = useState<Lang>('en');
   const t = sscCopy[lang];
@@ -104,19 +98,84 @@ export function SecurityScorecard() {
                     </div>
                   ))}
                 </div>
-                <p className={styles.introNote}>
-                  <span className={styles.introNoteDot} />
-                  {t.introNote}
-                </p>
               </div>
             </Reveal>
 
-            {/* ===== STORY A — QUESTIONNAIRES ===== */}
+            {/* ===== STORY A — RBAC ===== */}
             <div className={styles.sectionRule} />
             <section className={styles.storySection}>
               <Reveal>
                 <div className={styles.storyKicker}>
                   <span className={styles.storyLetter}>A</span>
+                  <span>{t.bKicker}</span>
+                </div>
+                <h2 className={styles.h2}>{t.bHead}</h2>
+                <a
+                  href="https://securityscorecard.com/blog/how-does-role-based-access-control-rbac-improve-organizational-security/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.sectionLink}
+                >
+                  <span className={styles.sectionLinkDot} />
+                  {t.rbacBlogLabel} ↗
+                </a>
+                <p
+                  className={styles.bodyCopy}
+                  style={{ marginTop: 'clamp(20px,2.4vw,28px)' }}
+                  dangerouslySetInnerHTML={{ __html: t.bCopy }}
+                />
+                <div className={styles.northStar}>
+                  <span className={styles.northStarLabel}>{t.northStarLabel}</span>
+                  <span className={styles.northStarText}>{t.northStar}</span>
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <div className={styles.stepsGrid}>
+                  {steps[lang].map((s) => (
+                    <div key={s.tag} className={styles.stepCard}>
+                      <div className={styles.stepMeta}>
+                        <span className={styles.stepTag}>{s.tag}</span>
+                        <span className={styles.stepMetric}>{s.metric}</span>
+                      </div>
+                      <h3 className={styles.stepTitle}>{s.title}</h3>
+                      <p className={styles.stepDesc} dangerouslySetInnerHTML={{ __html: s.desc }} />
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <p className={styles.mediaLabel} style={{ marginTop: 'clamp(26px,3vw,38px)' }}>{t.techLabel}</p>
+                <div className={styles.techGrid}>
+                  {techPoints[lang].map((tp) => (
+                    <div key={tp} className={styles.techPoint}>
+                      <span className={styles.techBullet}>▸</span>
+                      <span className={styles.techText} dangerouslySetInnerHTML={{ __html: tp }} />
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <p className={styles.mediaLabel} style={{ marginTop: 'clamp(26px,3vw,38px)' }}>{t.bVideoLabel}</p>
+                <BrowserMockup label="RBAC · demo">
+                  <video
+                    src="/video/rbac.mov"
+                    controls
+                    playsInline
+                    style={{ width: '100%', height: 'clamp(280px,42vw,540px)', display: 'block', objectFit: 'cover', background: '#000' }}
+                  />
+                </BrowserMockup>
+              </Reveal>
+            </section>
+
+            {/* ===== STORY B — QUESTIONNAIRES ===== */}
+            <div className={styles.sectionRule} />
+            <section className={styles.storySection}>
+              <Reveal>
+                <div className={styles.storyKicker}>
+                  <span className={styles.storyLetter}>B</span>
                   <span>{t.aKicker}</span>
                 </div>
                 <h2 className={styles.h2}>{t.aHead}</h2>
@@ -131,11 +190,11 @@ export function SecurityScorecard() {
                 </a>
               </Reveal>
 
-              {/* A.1 — The problem */}
+              {/* B.1 — The problem */}
               <Reveal>
                 <div className={styles.subsection}>
                   <div className={styles.subKicker}>
-                    <span>A.1</span>
+                    <span>B.1</span>
                     <span className={styles.subKickerLabel}>{t.a1label}</span>
                   </div>
                   <h3 className={styles.h3}>{t.a1head}</h3>
@@ -152,35 +211,26 @@ export function SecurityScorecard() {
 
                   <div style={{ marginTop: 'clamp(20px,2.4vw,28px)' }}>
                     <BrowserMockup label={`atlas.io · ${t.beforeTag}`}>
-                      <ImageSlot label={t.a1drop} height="clamp(260px,38vw,460px)" />
+                      <video
+                        src="/video/atlas.mov"
+                        controls
+                        playsInline
+                        style={{ width: '100%', height: 'auto', display: 'block', background: '#000' }}
+                      />
                     </BrowserMockup>
                   </div>
                 </div>
               </Reveal>
 
-              {/* A.2 — Migration */}
+              {/* B.2 — Migration */}
               <Reveal>
                 <div className={styles.subsection}>
                   <div className={styles.subKicker}>
-                    <span>A.2</span>
+                    <span>B.2</span>
                     <span className={styles.subKickerLabel}>{t.a2label}</span>
                   </div>
                   <h3 className={styles.h3}>{t.a2head}</h3>
-                  <p className={styles.bodyCopy}>{t.a2copy}</p>
-
-                  <div className={styles.migrationDiagram}>
-                    <div className={styles.migrationFrom}>
-                      <div className={styles.migrationLabel}>{t.fromLabel}</div>
-                      <div className={styles.migrationName}>atlas.io</div>
-                      <div className={styles.migrationDesc}>{t.fromDesc}</div>
-                    </div>
-                    <div className={styles.migrationArrow}>→</div>
-                    <div className={styles.migrationTo}>
-                      <div className={styles.migrationLabel}>{t.toLabel}</div>
-                      <div className={styles.migrationName}>securityscorecard.io</div>
-                      <div className={styles.migrationDesc}>{t.toDesc}</div>
-                    </div>
-                  </div>
+                  <p className={styles.bodyCopy} dangerouslySetInnerHTML={{ __html: t.a2copy }} />
 
                   <div className={styles.decisionsLabel}>{t.decisionsLabel}</div>
                   <div className={styles.decisionsList}>
@@ -188,7 +238,7 @@ export function SecurityScorecard() {
                       <div key={d.tag} className={styles.decisionItem}>
                         <span className={styles.decisionTag}>{d.tag}</span>
                         <div>
-                          <span className={styles.decisionText}>{d.text}</span>
+                          <span className={styles.decisionText} dangerouslySetInnerHTML={{ __html: d.text }} />
                           {d.todo && <span className={styles.todoTag}>{t.fillIn}</span>}
                         </div>
                       </div>
@@ -197,11 +247,11 @@ export function SecurityScorecard() {
                 </div>
               </Reveal>
 
-              {/* A.3 — Shipping + leading */}
+              {/* B.3 — Shipping + leading */}
               <Reveal>
                 <div className={styles.subsection}>
                   <div className={styles.subKicker}>
-                    <span>A.3</span>
+                    <span>B.3</span>
                     <span className={styles.subKickerLabel}>{t.a3label}</span>
                   </div>
                   <h3 className={styles.h3}>{t.a3head}</h3>
@@ -213,77 +263,13 @@ export function SecurityScorecard() {
 
                   <p className={styles.mediaLabel}>{t.videoLabel}</p>
                   <BrowserMockup urlBar={`securityscorecard.io/questionnaires · ${t.afterTag}`} label="After">
-                    <div className={styles.videoSlot}>
-                      <ImageSlot label={t.videoDrop} height="clamp(280px,42vw,540px)" />
-                      <div className={styles.playBtn}>
-                        <div className={styles.playCircle}>
-                          <span className={styles.playTriangle} />
-                        </div>
-                      </div>
-                    </div>
+                    <video
+                      src="/video/questionnaires.mov"
+                      controls
+                      playsInline
+                      style={{ width: '100%', height: 'clamp(280px,42vw,540px)', display: 'block', objectFit: 'cover', background: '#000' }}
+                    />
                   </BrowserMockup>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* ===== STORY B — RBAC ===== */}
-            <div className={styles.sectionRule} />
-            <section className={styles.storySection}>
-              <Reveal>
-                <div className={styles.storyKicker}>
-                  <span className={styles.storyLetter}>B</span>
-                  <span>{t.bKicker}</span>
-                </div>
-                <h2 className={styles.h2}>{t.bHead}</h2>
-                <div className={styles.northStar}>
-                  <span className={styles.northStarLabel}>{t.northStarLabel}</span>
-                  <span className={styles.northStarText}>{t.northStar}</span>
-                </div>
-                <div>
-                  <a
-                    href="https://securityscorecard.com/blog/how-does-role-based-access-control-rbac-improve-organizational-security/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.sectionLink}
-                    style={{ marginTop: '14px' }}
-                  >
-                    <span className={styles.sectionLinkDot} />
-                    {t.rbacBlogLabel} ↗
-                  </a>
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div className={styles.stepsGrid}>
-                  {steps[lang].map((s) => (
-                    <div key={s.tag} className={styles.stepCard}>
-                      <div className={styles.stepMeta}>
-                        <span className={styles.stepTag}>{s.tag}</span>
-                        <span className={styles.stepMetric}>{s.metric}</span>
-                      </div>
-                      <h3 className={styles.stepTitle}>{s.title}</h3>
-                      <p className={styles.stepDesc}>{s.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <p className={styles.mediaLabel}>{t.wfLabel}</p>
-                <BrowserMockup label="RBAC · three phases">
-                  <ImageSlot label={t.wfDrop} height="clamp(460px,58vw,720px)" />
-                </BrowserMockup>
-              </Reveal>
-
-              <Reveal>
-                <p className={styles.mediaLabel} style={{ marginTop: 'clamp(26px,3vw,38px)' }}>{t.techLabel}</p>
-                <div className={styles.techGrid}>
-                  {techPoints[lang].map((tp) => (
-                    <div key={tp} className={styles.techPoint}>
-                      <span className={styles.techBullet}>▸</span>
-                      <span className={styles.techText}>{tp}</span>
-                    </div>
-                  ))}
                 </div>
               </Reveal>
             </section>

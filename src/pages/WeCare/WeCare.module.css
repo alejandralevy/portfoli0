@@ -108,7 +108,7 @@
 .h1 {
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(64px, 11vw, 140px);
+  font-size: clamp(64px, 8vw, 104px);
   letter-spacing: -0.03em;
   line-height: 0.9;
   color: #102542;

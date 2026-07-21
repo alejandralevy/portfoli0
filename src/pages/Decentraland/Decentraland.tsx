@@ -11,12 +11,6 @@ import { dclCopy, p1points, p1tags, features, stack } from '../../content/decent
 import { colors } from '../../tokens';
 import styles from './Decentraland.module.css';
 
-const ImageSlot = ({ label, height }: { label: string; height: string }) => (
-  <div className={styles.imageSlot} style={{ height }}>
-    <span className={styles.imageSlotLabel}>{label}</span>
-  </div>
-);
-
 export function Decentraland() {
   const [lang, setLang] = useState<Lang>('en');
   const t = dclCopy[lang];
@@ -102,6 +96,9 @@ export function Decentraland() {
                   </div>
                   <h2 className={styles.h2}>{t.p1head}</h2>
                   <p className={styles.bodyCopy}>{t.p1copy}</p>
+                  <div className={styles.repoRow} style={{ marginTop: 'clamp(16px, 2vw, 24px)' }}>
+                    <CodeButton href="https://github.com/decentraland/ui2" label="decentraland/ui2" accentColor="rgba(255,45,85,.45)" accentHover="#FF2D55" />
+                  </div>
                 </div>
               </Reveal>
 
@@ -109,10 +106,18 @@ export function Decentraland() {
                 <p className={styles.mediaLabel}>{t.dsLabel}</p>
                 <div className={styles.screenshotsGrid}>
                   <BrowserMockup label="ui2 · Card">
-                    <ImageSlot label="ui2 Card screenshot" height="clamp(220px, 26vw, 320px)" />
+                    <img
+                      src="/img/scene_card.png"
+                      alt="ui2 Card screenshot"
+                      style={{ width: '100%', height: 'auto', display: 'block' }}
+                    />
                   </BrowserMockup>
                   <BrowserMockup label="ui2 · Table">
-                    <ImageSlot label="ui2 Table screenshot" height="clamp(220px, 26vw, 320px)" />
+                    <img
+                      src="/img/scene_table.png"
+                      alt="ui2 Table screenshot"
+                      style={{ width: '100%', height: 'auto', display: 'block' }}
+                    />
                   </BrowserMockup>
                 </div>
               </Reveal>
@@ -120,12 +125,12 @@ export function Decentraland() {
               <Reveal>
                 <p className={styles.mediaLabel} style={{ marginTop: 'clamp(28px, 3.6vw, 44px)' }}>{t.videoLabel}</p>
                 <BrowserMockup urlBar="decentraland.org/top-scenes" label="Top Scenes">
-                  <div className={styles.videoSlot}>
-                    <ImageSlot label="Top Scenes video" height="clamp(280px, 42vw, 540px)" />
-                    <div className={styles.playBtn}>
-                      <span className={styles.playTriangle} />
-                    </div>
-                  </div>
+                  <video
+                    src="/video/topscenes.mov"
+                    controls
+                    playsInline
+                    style={{ width: '100%', height: 'auto', display: 'block', background: '#000' }}
+                  />
                 </BrowserMockup>
               </Reveal>
 
@@ -145,7 +150,6 @@ export function Decentraland() {
 
               <Reveal>
                 <div className={styles.repoRow}>
-                  <CodeButton href="https://github.com/decentraland/ui2" label="decentraland/ui2" accentColor="rgba(255,45,85,.45)" accentHover="#FF2D55" />
                   <CodeButton href="https://github.com/decentraland/top-scenes" label="decentraland/top-scenes" accentColor="rgba(255,45,85,.45)" accentHover="#FF2D55" />
                 </div>
               </Reveal>
@@ -164,10 +168,6 @@ export function Decentraland() {
                   </div>
                   <h2 className={styles.h2}>{t.p2head}</h2>
                   <p className={styles.bodyCopy}>{t.p2copy}</p>
-                  <p className={styles.featNote}>
-                    <span className={styles.featNoteDot} />
-                    {t.featNote}
-                  </p>
                 </div>
               </Reveal>
 
@@ -187,7 +187,12 @@ export function Decentraland() {
                       </div>
                       <div style={{ order: f.imgOrder }}>
                         <BrowserMockup label="creator-hub">
-                          <ImageSlot label="Creator Hub screenshot" height="clamp(220px, 26vw, 340px)" />
+                          <video
+                            src={f.video}
+                            controls
+                            playsInline
+                            style={{ width: '100%', height: 'auto', display: 'block', background: '#000' }}
+                          />
                         </BrowserMockup>
                       </div>
                     </div>
@@ -228,8 +233,8 @@ export function Decentraland() {
             backHref="/"
             nextSub={t.nextSub}
             nextLabel={t.nextProj}
-            nextHref="/tardeo-argentino"
-            nextColor={colors.projects.tardeoArgentino}
+            nextHref="/security-scorecard"
+            nextColor={colors.projects.securityScorecard}
           />
         </Reveal>
 
