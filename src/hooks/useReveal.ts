@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-export function useReveal(options?: IntersectionObserverInit) {
-  const ref = useRef<HTMLElement>(null);
+export function useReveal<T extends HTMLElement = HTMLDivElement>(options?: IntersectionObserverInit) {
+  const ref = useRef<T>(null);
 
   useEffect(() => {
     const el = ref.current;

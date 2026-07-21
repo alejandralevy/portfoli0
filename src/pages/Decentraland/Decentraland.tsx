@@ -7,7 +7,7 @@ import { CodeButton } from '../../components/CodeButton';
 import { FooterNav } from '../../components/FooterNav';
 import { Reveal } from '../../components/Reveal/Reveal';
 import { Tag } from '../../components/Tag';
-import { dclCopy, p1points, p1tags, features, stack } from '../../content/decentraland';
+import { dclCopy, p1points, features, stack } from '../../content/decentraland';
 import { colors } from '../../tokens';
 import styles from './Decentraland.module.css';
 
@@ -61,11 +61,6 @@ export function Decentraland() {
             </Reveal>
             <Reveal delay={180}><h1 className={styles.h1}>Decentraland</h1></Reveal>
             <Reveal delay={280}><p className={styles.heroStatement}>{t.heroStatement}</p></Reveal>
-            <Reveal delay={360}>
-              <div className={styles.tagRow}>
-                {p1tags.map(tag => <Tag key={tag} dark>{tag}</Tag>)}
-              </div>
-            </Reveal>
             <Reveal delay={440}>
               <div className={styles.heroCta}>
                 <CodeButton
@@ -180,9 +175,6 @@ export function Decentraland() {
                         <div>
                           <h3 className={styles.h3}>{f.title}</h3>
                           <p className={styles.featureDesc}>{f.desc}</p>
-                          <div className={styles.featureTags}>
-                            {f.tags.map(tg => <Tag key={tg} dark>{tg}</Tag>)}
-                          </div>
                         </div>
                       </div>
                       <div style={{ order: f.imgOrder }}>
@@ -217,6 +209,10 @@ export function Decentraland() {
                 <div className={styles.stackTags}>
                   {stack.map(s => <Tag key={s} dark>{s}</Tag>)}
                 </div>
+                <p className={styles.featNote} style={{ marginTop: 'clamp(20px,2.4vw,28px)' }}>
+                  <span className={styles.featNoteDot} />
+                  {t.openSourceNote}
+                </p>
               </section>
             </Reveal>
 

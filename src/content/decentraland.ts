@@ -18,6 +18,7 @@ interface DclCopy {
   p2head: string;
   p2copy: string;
   stackEyebrow: string;
+  openSourceNote: string;
   navEyebrow: string;
   backSub: string;
   backHome: string;
@@ -45,6 +46,7 @@ export const dclCopy: Record<Lang, DclCopy> = {
     p2head: 'Features I shipped in the Creator Hub',
     p2copy: 'I contributed a handful of features across the Creator Hub — the desktop app creators use to build, preview and publish scenes.',
     stackEyebrow: 'Stack',
+    openSourceNote: 'Decentraland is open source — browse the repos above to see every contribution.',
     navEyebrow: 'Keep exploring',
     backSub: 'All projects',
     backHome: 'Back to portfolio',
@@ -70,6 +72,7 @@ export const dclCopy: Record<Lang, DclCopy> = {
     p2head: 'Features que lancé en el Creator Hub',
     p2copy: 'Aporté varias features a lo largo del Creator Hub — la app de escritorio que usan los creadores para construir, previsualizar y publicar escenas.',
     stackEyebrow: 'Stack',
+    openSourceNote: 'Decentraland es open source — mirá los repos de arriba para ver cada contribución.',
     navEyebrow: 'Seguí explorando',
     backSub: 'Todos los proyectos',
     backHome: 'Volver al portfolio',
@@ -92,18 +95,16 @@ export const p1points = {
   ],
 };
 
-export const p1tags = ['React', 'React Query', 'TypeScript', 'Redux', 'Storybook', 'Electron', 'Babylon'];
-
 export const features = {
   en: [
-    { n: 'F1', title: 'UI overhaul, component by component', desc: "The Creator Hub's interface hadn't been touched in years. I reworked the components and interaction patterns across the app to bring it up to modern standards.", tags: ['React', 'UX'], video: '/video/ui.mov' },
-    { n: 'F2', title: 'Tag items, act on many at once', desc: 'Creators could only act on one scene or asset at a time. I added tagging, so they can group items and apply an action to all of them in one step.', tags: ['React', 'Bulk actions'], video: '/video/tags.mov' },
-    { n: 'F3', title: 'Settings: editors and updates', desc: 'Added a settings panel to choose a default code editor, automatically detect which editors are installed, and keep the Creator Hub itself up to date automatically.', tags: ['Electron', 'Settings'], video: '/video/settings.mov' },
+    { n: 'F1', title: 'UI overhaul, component by component', desc: "The Creator Hub's interface hadn't been touched in years. I reworked the components and interaction patterns across the app to bring it up to modern standards.", video: '/video/ui.mov' },
+    { n: 'F2', title: 'Tag items, act on many at once', desc: 'Creators could only act on one scene or asset at a time. I added tagging, so they can group items and apply an action to all of them in one step.', video: '/video/tags.mov' },
+    { n: 'F3', title: 'Settings: editors and updates', desc: 'Added a settings panel to choose a default code editor, automatically detect which editors are installed, and keep the Creator Hub itself up to date automatically.', video: '/video/settings.mov' },
   ],
   es: [
-    { n: 'F1', title: 'Renovación de UI, componente por componente', desc: 'La interfaz del Creator Hub no se tocaba hacía años. Rehice los componentes y los patrones de interacción de toda la app para llevarla a un estándar moderno.', tags: ['React', 'UX'], video: '/video/ui.mov' },
-    { n: 'F2', title: 'Taggear items, actuar sobre varios a la vez', desc: 'Los creadores solo podían actuar sobre una escena o asset a la vez. Agregué tags para que puedan agrupar items y aplicar una acción sobre todos en un solo paso.', tags: ['React', 'Acciones masivas'], video: '/video/tags.mov' },
-    { n: 'F3', title: 'Settings: editores y actualizaciones', desc: 'Sumé un panel de settings para elegir un editor de código default, detectar automáticamente qué editores están instalados, y mantener actualizado el Creator Hub automáticamente.', tags: ['Electron', 'Settings'], video: '/video/settings.mov' },
+    { n: 'F1', title: 'Renovación de UI, componente por componente', desc: 'La interfaz del Creator Hub no se tocaba hacía años. Rehice los componentes y los patrones de interacción de toda la app para llevarla a un estándar moderno.', video: '/video/ui.mov' },
+    { n: 'F2', title: 'Taggear items, actuar sobre varios a la vez', desc: 'Los creadores solo podían actuar sobre una escena o asset a la vez. Agregué tags para que puedan agrupar items y aplicar una acción sobre todos en un solo paso.', video: '/video/tags.mov' },
+    { n: 'F3', title: 'Settings: editores y actualizaciones', desc: 'Sumé un panel de settings para elegir un editor de código default, detectar automáticamente qué editores están instalados, y mantener actualizado el Creator Hub automáticamente.', video: '/video/settings.mov' },
   ],
 };
 
