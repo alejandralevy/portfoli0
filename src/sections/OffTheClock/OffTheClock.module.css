@@ -32,21 +32,4 @@
   height: clamp(190px, 24vw, 300px);
   border-radius: 12px;
   overflow: hidden;
-  background: repeating-linear-gradient(
-    135deg,
-    #ECEAE3 0 12px,
-    #E6E3DB 12px 24px
-  );
-  border: 1px solid rgba(28, 27, 25, 0.1);
-  display: flex;
-  align-items: flex-end;
-  padding: 13px;
-}
-
-.photoLabel {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-faint);
 }

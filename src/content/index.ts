@@ -23,7 +23,6 @@ interface Copy {
   offHead: string;
   offCopy: string;
   avail: string;
-  photo: string;
 }
 
 export const copy: Record<Lang, Copy> = {
@@ -50,7 +49,6 @@ export const copy: Record<Lang, Copy> = {
     offHead: 'Behind a camera, or on a plane',
     offCopy: "When I'm not shipping, I'm usually shooting or travelling. Photography keeps my eye sharp — and gives me a reason to log off.",
     avail: 'Open to freelance — short & long term',
-    photo: 'Photo — drop image',
   },
   es: {
     l1: 'Soy una',
@@ -75,7 +73,6 @@ export const copy: Record<Lang, Copy> = {
     offHead: 'Detrás de una cámara, o en un avión',
     offCopy: 'Cuando no estoy lanzando, suelo estar sacando fotos o viajando. La fotografía me mantiene el ojo afilado — y me da una razón para desconectar.',
     avail: 'Disponible para freelance — corto y largo plazo',
-    photo: 'Foto — soltá imagen',
   },
 };
 

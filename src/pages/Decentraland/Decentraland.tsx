@@ -6,8 +6,7 @@ import { DrawingRule } from '../../components/DrawingRule';
 import { CodeButton } from '../../components/CodeButton';
 import { FooterNav } from '../../components/FooterNav';
 import { Reveal } from '../../components/Reveal/Reveal';
-import { Tag } from '../../components/Tag';
-import { dclCopy, p1points, features, stack } from '../../content/decentraland';
+import { dclCopy, p1points, features } from '../../content/decentraland';
 import { colors } from '../../tokens';
 import styles from './Decentraland.module.css';
 
@@ -193,28 +192,15 @@ export function Decentraland() {
               </div>
 
               <Reveal>
-                <div className={styles.repoRow}>
+                <p className={styles.featNote}>
+                  <span className={styles.featNoteDot} />
+                  {t.openSourceNote}
+                </p>
+                <div className={styles.repoRow} style={{ marginTop: 'clamp(16px, 2vw, 24px)' }}>
                   <CodeButton href="https://github.com/decentraland/creator-hub" label="decentraland/creator-hub" accentColor="rgba(255,45,85,.45)" accentHover="#FF2D55" />
                 </div>
               </Reveal>
             </section>
-
-            {/* ===== STACK ===== */}
-            <div className={styles.rule}>
-              <DrawingRule variant="gradient" />
-            </div>
-            <Reveal>
-              <section className={styles.stackSection}>
-                <p className={styles.stackEyebrow}>{t.stackEyebrow}</p>
-                <div className={styles.stackTags}>
-                  {stack.map(s => <Tag key={s} dark>{s}</Tag>)}
-                </div>
-                <p className={styles.featNote} style={{ marginTop: 'clamp(20px,2.4vw,28px)' }}>
-                  <span className={styles.featNoteDot} />
-                  {t.openSourceNote}
-                </p>
-              </section>
-            </Reveal>
 
           </div>
         </div>

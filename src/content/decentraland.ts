@@ -17,7 +17,6 @@ interface DclCopy {
   p2kicker: string;
   p2head: string;
   p2copy: string;
-  stackEyebrow: string;
   openSourceNote: string;
   navEyebrow: string;
   backSub: string;
@@ -45,7 +44,6 @@ export const dclCopy: Record<Lang, DclCopy> = {
     p2kicker: 'Creator Hub',
     p2head: 'Features I shipped in the Creator Hub',
     p2copy: 'I contributed a handful of features across the Creator Hub — the desktop app creators use to build, preview and publish scenes.',
-    stackEyebrow: 'Stack',
     openSourceNote: 'Decentraland is open source — browse the repos above to see every contribution.',
     navEyebrow: 'Keep exploring',
     backSub: 'All projects',
@@ -71,7 +69,6 @@ export const dclCopy: Record<Lang, DclCopy> = {
     p2kicker: 'Creator Hub',
     p2head: 'Features que lancé en el Creator Hub',
     p2copy: 'Aporté varias features a lo largo del Creator Hub — la app de escritorio que usan los creadores para construir, previsualizar y publicar escenas.',
-    stackEyebrow: 'Stack',
     openSourceNote: 'Decentraland es open source — mirá los repos de arriba para ver cada contribución.',
     navEyebrow: 'Seguí explorando',
     backSub: 'Todos los proyectos',
@@ -107,5 +104,3 @@ export const features = {
     { n: 'F3', title: 'Settings: editores y actualizaciones', desc: 'Sumé un panel de settings para elegir un editor de código default, detectar automáticamente qué editores están instalados, y mantener actualizado el Creator Hub automáticamente.', video: '/video/settings.mov' },
   ],
 };
-
-export const stack = ['TypeScript', 'React', 'React Query', 'Redux', 'Web3 / Ethereum', 'Electron', 'Storybook', 'Vite'];
